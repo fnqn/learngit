@@ -1,0 +1,2 @@
+git remove add origin git@github.com:fnqn/learngit.git 
+git push -u origin master
