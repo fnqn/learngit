@@ -3,3 +3,29 @@ git push -u origin master
 git push -u origin master  ###1st push all branch###
 git push origin master
 ~
+###clone repository##
+git clone git@github.com:fnqn/gitskills.git
+
+git branch ###show branch
+git branch name  ###create branch
+git checkout name ###switch branch
+git checkout -b name ###create+switch branch
+git merge name ### merget branch to current branch
+git branch -d name ###delete branch
+
+git log --graph --pretty=oneline --abbrev-commit
+
+--no--ff  normal merge can check history , fast forward can NOT show history merge
+when develop -- Master is stable always, then create dev brach for project -- then every one should have personal branch, then merge to dev branch
+
+when current work not completed, then 1st  "git stash ",then create branch ,fix bug , after bug fixed , do "git stash pop ",go back original work place
+
+when develep new function, strongly recommend crate new banch
+if drop not merged branch , use "git branch -D <name>" to force remove the branch.
+
+git push origin branch-name
+if "git pull" got "no tracking information", then use "git branch --set-upstream branch-name origin/branch-name"
+git remote -v
+git checkout -b branch-name origin/branch-name
+
+
