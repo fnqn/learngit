@@ -29,3 +29,25 @@ git remote -v
 git checkout -b branch-name origin/branch-name
 
 
+"Fork" like as clone form open sourc to yourself resposity
+"pull request" to official resposity
+
+if need ignore some files , need crate ".gitignore"
+
+create alias:
+eg:  git config --global alias.st status
+
+
+How create GIT server
+recommend ubuntu or debian
+$ sudo apt-get install git
+$ sudo adduser git
+need import users public key "id_rsa.pub" to /home/git/.ssh/authorized_keys
+initial repository , eg: /srv/sample.git , cd /srv , sudo git init --bare sample.git
+sudo chown -R git:git sample.git
+disallow git login , modifiy /etc/passwd , add "git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell"
+clone remote respoisitory ---  $git clone git@server:/srv/sample.git
+
+for public key managemene "Gitosis"
+
+
